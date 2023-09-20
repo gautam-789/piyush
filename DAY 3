@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main(){
+	float Base,Height;
+	printf("Enter the value of height ");
+	scanf("%f",&Base);
+	printf("Enter the value of base ");
+	scanf("%f",&Height);
+	printf("Area of triangle : %f ", 0.5 * Base * Height);
+	return 0;
+}
