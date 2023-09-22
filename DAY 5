@@ -1,0 +1,15 @@
+# Function to determine whether a Battery Low notification should be shown
+def is_battery_low(x):
+    if x <= 15:
+        return "YES"
+    else:
+        return "NO"
+
+# Input the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+    x = int(input())
+    result = is_battery_low(x)
+    print(result)
