@@ -1,0 +1,8 @@
+# Input the number of test cases
+T = int(input("Enter the number of test cases: "))
+
+# Process each test case
+for _ in range(T):
+    N = int(input())  # Number of friends for this test case
+    cars_required = (N + 3) // 4  # Calculate minimum cars required using integer division
+    print(cars_required)
