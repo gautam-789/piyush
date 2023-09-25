@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Read the number of test cases
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y); // Read the values of X and Y for each test case
+
+        // Calculate the maximum number of people who can take a bath
+        int max_people = X / (2 * Y);
+
+        printf("%d\n", max_people); // Output the result for each test case
+    }
+
+    return 0;
+}
