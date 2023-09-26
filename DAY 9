@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+    
+    while (T--) {
+        long long X, Y; // X coins per month, Y coins to purchase
+        scanf("%lld %lld", &X, &Y);
+        
+        if (X * 2 <= Y) {
+            // Chef can rent the cooler for at least half the cost of purchasing
+            // So, maximum months = Y / (2 * X)
+            printf("%lld\n", Y / (2 * X));
+        } else {
+            // Renting is not cost-effective, Chef should not rent
+            printf("0\n");
+        }
+    }
+    
+    return 0;
+}
