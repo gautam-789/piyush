@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function to calculate the maximum number of chocolates Chef can buy
+int maxChocolates(int X, int Y) {
+    return X / Y;
+}
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y; // Amount Chef has and cost of one chocolate
+        scanf("%d %d", &X, &Y);
+        
+        // Calculate the maximum number of chocolates and print the result
+        int result = maxChocolates(X, Y);
+        printf("%d\n", result);
+    }
+
+    return 0;
+}
