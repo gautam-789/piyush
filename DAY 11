@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function to determine if Chef's team can win
+char* can_win(int N, int M) {
+    // Calculate the maximum possible runs in the remaining overs
+    int max_possible_runs = M * 6;
+
+    // Check if the maximum possible runs are greater than or equal to required runs
+    if (max_possible_runs >= N) {
+        return "YES";
+    } else {
+        return "NO";
+    }
+}
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    // Process each test case
+    while (T--) {
+        int N, M;
+        scanf("%d %d", &N, &M);
+
+        // Check if Chef's team can win and print the result
+        char* result = can_win(N, M);
+        printf("%s\n", result);
+    }
+
+    return 0;
+}
