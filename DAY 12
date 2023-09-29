@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Read the number of test cases
+
+    while (T--) {
+        int D, X, Y, Z;
+        scanf("%d %d %d %d", &D, &X, &Y, &Z); // Read input values
+
+        int time = (D + Y) / X + Z; // Calculate minimum time
+
+        printf("%d\n", time); // Output the result
+    }
+
+    return 0;
+}
