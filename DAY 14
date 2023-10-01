@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T, X, Y;
+    scanf("%d", &T); // Read the number of test cases
+
+    while (T--) {
+        scanf("%d %d", &X, &Y); // Read the values of X and Y for each test case
+
+        // Calculate the minimum number of moves required
+        int moves = X / Y;
+        if (X % Y != 0) {
+            moves++; // If there are remaining stairs, add one more move
+        }
+
+        printf("%d\n", moves); // Output the result for this test case
+    }
+
+    return 0;
+}
