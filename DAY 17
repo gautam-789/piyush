@@ -1,0 +1,19 @@
+# Function to classify seat type
+def classify_seat_type(seat_number):
+    if seat_number % 6 == 1 or seat_number % 6 == 0:
+        return "WS"
+    elif seat_number % 6 == 2 or seat_number % 6 == 5:
+        return "MS"
+    else:
+        return "AS"
+
+# Input number of test cases
+T = int(input("Enter number of test cases: "))
+
+# Iterate through each test case
+for _ in range(T):
+    # Input seat number
+    seat_number = int(input("Enter seat number: "))
+    # Classify seat type and print the result
+    seat_type = classify_seat_type(seat_number)
+    print(seat_type)
