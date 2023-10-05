@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Input number of test cases
+
+    while (T--) {
+        int A, B;
+        scanf("%d %d", &A, &B); // Input scores of Alice and Bob
+
+        int remaining_points = 7 - (A > B ? A : B); // Calculate minimum points needed to win
+
+        printf("%d\n", remaining_points);
+    }
+
+    return 0;
+}
