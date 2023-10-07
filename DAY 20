@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    // Loop through each test case
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y); // Initial and final volumes
+
+        // Calculate the absolute difference between X and Y
+        int diff = abs(X - Y);
+
+        // Output the minimum number of button presses required
+        printf("%d\n", diff);
+    }
+
+    return 0;
+}
