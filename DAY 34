@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+// Function to check if the weight can be measured using given weights
+int can_measure_weight(int A, int B, int C, int D, int W, int X, int Y, int Z) {
+    int weights[] = {A, B, C, D, W, X, Y, Z};
+    int i, j, total_weight;
+
+    // Generate all possible combinations of weights
+    for (i = 1; i < (1 << 8); ++i) {
+        total_weight = 0;
+        for (j = 0; j < 8; ++j) {
+            if (i & (1 << j)) {
+                total_weight += weights[j];
+            }
+        }
+        if (total_weight == W) {
+            return 1; // Found a combination that matches the weight W
+        }
+    }
+    return 0; // No combination matches the weight W
+}
+
+int main() {
+    int T, A, B, C, D, W, X, Y, Z;
+    // Read the number of test cases
+    scanf("%d", &T);
+
+    // Process each test case
+    while (T--) {
+        // Read input weights for the test case
+        scanf("%d %d %d %d %d %d %d %d", &A, &B, &C, &D, &W, &X, &Y, &Z);
+        
+        // Check if the weight can be measured
+        if (can_measure_weight(A, B, C, D, W, X, Y, Z)) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
