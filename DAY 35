@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int T, X, Y;
+    scanf("%d", &T); // Read the number of test cases
+
+    // Process each test case
+    while (T--) {
+        scanf("%d %d", &X, &Y); // Read input for each test case
+        int max_neighbors = X / Y; // Calculate the maximum number of neighbors Chef can feed completely
+        printf("%d\n", max_neighbors); // Output the result
+    }
+
+    return 0;
+}
