@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    // Iterate through each test case
+    for (int i = 0; i < T; ++i) {
+        int S, X, Y, Z; // Total memory of Chef's phone, memory occupied by installed apps, and memory required by the new app
+        scanf("%d %d %d %d", &S, &X, &Y, &Z);
+
+        // Calculate total memory used by already installed apps
+        int total_memory_used = X + Y;
+
+        // Calculate minimum number of apps Chef has to delete
+        // to make space for the new app
+        int apps_to_delete = (total_memory_used < S - Z) ? 0 : (total_memory_used - Z > X ? total_memory_used - Z - X : total_memory_used - Z - Y);
+
+        // Output the result for this test case
+        printf("%d\n", apps_to_delete);
+    }
+
+    return 0;
+}
