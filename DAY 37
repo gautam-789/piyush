@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// Function to check if Chef can divide the pizza into N pieces
+int can_divide_pizza(int N) {
+    // Calculate the sum of the first N natural numbers
+    int total_pieces = N * (N + 1) / 2;
+    // Check if the total pieces is greater than or equal to N
+    return total_pieces >= N;
+}
+
+int main() {
+    int T, N;
+    // Read the number of test cases
+    scanf("%d", &T);
+
+    // Iterate through each test case
+    while (T--) {
+        // Read the desired number of cuts for this test case
+        scanf("%d", &N);
+        // Check if Chef can divide the pizza into N pieces and print the result
+        if (can_divide_pizza(N)) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
