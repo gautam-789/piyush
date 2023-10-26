@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Function to determine if country C is in trade surplus
+char* isTradeSurplus(int export1, int import1, int export2, int import2) {
+    int countryA_trade_balance = export1 - import1;
+    int countryB_trade_balance = export2 - import2;
+
+    if (countryA_trade_balance > 0 && countryB_trade_balance > 0) {
+        return "YES";
+    } else {
+        return "NO";
+    }
+}
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    for (int i = 0; i < T; i++) {
+        int export1, import1, export2, import2;
+        scanf("%d %d %d %d", &export1, &import1, &export2, &import2);
+        char* result = isTradeSurplus(export1, import1, export2, import2);
+        printf("%s\n", result);
+    }
+
+    return 0;
+}
