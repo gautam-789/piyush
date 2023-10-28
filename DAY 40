@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int T, N;
+    // Read the number of test cases
+    scanf("%d", &T);
+    
+    // Iterate through each test case
+    while (T--) {
+        // Read the number of spooky days for this test case
+        scanf("%d", &N);
+        
+        // Calculate the number of Tuesdays (since today is Monday)
+        // We add 1 to include today (Monday)
+        int numTuesdays = (N + 1) / 7;
+        
+        // Output the result for this test case
+        printf("%d\n", numTuesdays);
+    }
+    
+    return 0;
+}
