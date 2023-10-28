@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    // Iterate through each test case
+    for (int t = 0; t < T; ++t) {
+        int X; // Amount to be paid
+        scanf("%d", &X);
+
+        // Calculate the number of 10-rupee coins
+        int tens = X / 10;
+
+        // Calculate the remaining amount after using 10-rupee coins
+        int remaining = X % 10;
+
+        // Calculate the number of 5-rupee coins required to fill the remaining amount
+        int fives = remaining / 5;
+
+        // If the remaining amount cannot be paid using 5-rupee coins, print -1
+        // Otherwise, print the total number of coins needed
+        if (remaining % 5 != 0) {
+            printf("-1\n");
+        } else {
+            printf("%d\n", tens + fives);
+        }
+    }
+    return 0;
+}
