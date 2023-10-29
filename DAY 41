@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Read the number of test cases
+
+    while (T--) {
+        int P, Q;
+        scanf("%d %d", &P, &Q); // Read the scores of Alice and Bob
+
+        // Calculate the total number of points played so far
+        int totalPoints = P + Q;
+        
+        // Calculate the number of sets played so far
+        int setsPlayed = totalPoints / 4;
+
+        // Determine whose serve it is based on the number of sets played
+        // If the number of sets played is even, it's Alice's serve, else Bob's serve
+        if (setsPlayed % 2 == 0) {
+            printf("Alice\n");
+        } else {
+            printf("Bob\n");
+        }
+    }
+
+    return 0;
+}
