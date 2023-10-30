@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T, N, M;
+    scanf("%d", &T); // Read the number of test cases
+    
+    // Iterate through each test case
+    for (int i = 0; i < T; i++) {
+        scanf("%d %d", &N, &M); // Read input values for each test case
+        
+        // Calculate the discounted online price
+        double discounted_price = 0.9 * N;
+
+        // Compare the discounted online price with the restaurant price
+        if (discounted_price < M) {
+            printf("ONLINE\n");
+        } else if (discounted_price > M) {
+            printf("DINING\n");
+        } else {
+            printf("EITHER\n");
+        }
+    }
+    return 0;
+}
