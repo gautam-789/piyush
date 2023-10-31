@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y; // X represents the total movie length, Y represents the first Y minutes watched at double speed
+    scanf("%d %d", &X, &Y); // Input the values of X and Y
+
+    // Calculate the total time Chef will spend watching the movie
+    double total_time = (Y / 2.0) + (X - Y);
+
+    // Print the result
+    printf("Total time Chef will spend watching the movie: %.2lf minutes\n", total_time);
+
+    return 0;
+}
